@@ -11,16 +11,19 @@ export class MercadoriasComponent {
 mercadorias=[{
   id:1,
     descricao:"arroz",
-    quantidade:1
+    quantidadeEstoque:1,
+    quantidadeMinima:2
   },
 {id:2,
   descricao:"feijao",
-  quantidade:5
+  quantidadeEstoque:5,
+  quantidadeMinima:3
 },
 {
   id:3,
   descricao:"oleo",
-  quantidade:2
+  quantidadeEstoque:2,
+  quantidadeMinima:2
 }]
 
 
