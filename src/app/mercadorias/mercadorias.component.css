@@ -1,19 +1,26 @@
+
+
 .center-hor{
     margin-right: auto;
     margin-left: auto;
+    padding: 20px;
 
 }
+
+
 
 .layout-table,
 .layout-table th,
 .layout-table td{
     border-style: solid;
-    border-color: #000;
+    border-color: white;
     border-width: 1px;
+    padding: 10px;
+    color:white
 }
 
 .header-table-gray{
-    background-color: gray;
+    background-color: #05445E;
 }
 
 .text-center{
@@ -21,8 +28,8 @@
 }
 
 .par{
-    background-color: #bdbdbd;
+    background-color: #189AB4;
 }
 .impar{
-    background-color: #e8e8e8;
+    background-color: #75E6DA;
 }

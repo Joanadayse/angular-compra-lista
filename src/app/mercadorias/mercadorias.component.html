@@ -1,59 +1,63 @@
-<div style="text-align: center;">
- <h1>
-    {{title}}
- </h1>
-</div>
-<div>
-  <table class="center-hor layout-table" width="500px">
-   <thead>
-      <tr class="header-table-gray">
-         <th>
-            ID
-         </th>
-         <th>
-               Nome mercadorias 
-         </th>
-         <th>
-               Quantidade em estoque
-         </th>
-         <th>
-            Quantidade Minima
-         </th>
-         <th>
-            Precisa Comprar
-         </th>
-        
-      </tr>
 
-   </thead>
-   <tbody>
-      <tr class="text-center" *ngFor="let mercadoria of mercadorias ;let par=even; odd as impar"
-      [ngClass]="{par:par,impar:impar}"
-      >
-        
-         
-         <td>
-            {{mercadoria.id}}
-         </td>
-         <td>
-            {{mercadoria.descricao}}
-         </td>
-         <td>
-            {{mercadoria.quantidadeEstoque}}
-         </td>
-         <td>
-            {{mercadoria.quantidadeMinima}}
-         </td>
-         <td>
-            <span *ngIf="mercadoria.quantidadeEstoque >= mercadoria.quantidadeMinima;then naoPrecisaComprar; else precisaComprar"></span>
-            <ng-  #precisaComprar>Sim</ng->
-            <ng-template #naoPrecisaComprar>Não</ng-template>
-         </td>
+   <div style="text-align: center;">
+      <h1 style="margin-top: 200px; color: #05445E;" >
+         {{title}}
+      </h1>
+     </div>
+     <div>
+       <table class="center-hor layout-table" width="50%" >
+        <thead>
+           <tr class="header-table-gray">
+              <th>
+                 ID
+              </th>
+              <th>
+                    Nome mercadorias 
+              </th>
+              <th>
+                    Quantidade em estoque
+              </th>
+              <th>
+                 Quantidade Minima
+              </th>
+              <th>
+                 Precisa Comprar
+              </th>
+             
+           </tr>
+     
+        </thead>
+        <tbody>
+           <tr class="text-center" *ngFor="let mercadoria of mercadorias ;let par=even; odd as impar"
+           [ngClass]="{par:par,impar:impar}"
+           >
+             
+              
+              <td>
+                 {{mercadoria.id}}
+              </td>
+              <td>
+                 {{mercadoria.descricao}}
+              </td>
+              <td>
+                 {{mercadoria.quantidadeEstoque}}
+              </td>
+              <td>
+                 {{mercadoria.quantidadeMinima}}
+              </td>
+              <td>
+                 <span *ngIf="mercadoria.quantidadeEstoque >= mercadoria.quantidadeMinima;then naoPrecisaComprar; else precisaComprar"></span>
+                 <ng-template  #precisaComprar>Sim</ng-template>
+                 <ng-template #naoPrecisaComprar>Não</ng-template>
+              </td>
+     
+           </tr>
+     
+     
+        </tbody>
+       </table>
+     </div>
+     
+     
 
-      </tr>
-
-
-   </tbody>
-  </table>
-</div>
 
