@@ -26,5 +26,13 @@ mercadorias=[{
   quantidadeMinima:2
 }]
 
+novaMercadoria={
+  id:4,
+  descricao:"sal",
+  quantidadeEstoque:2,
+  quantidadeMinima:1
+}
+constructor(){}
+
 
 }

@@ -33,3 +33,14 @@
 .impar{
     background-color: #75E6DA;
 }
+
+.width-100{
+    width: 100%;
+}
+
+.container-input{
+    width: 500px;
+    margin-top: 20px;
+    /* margin-right: auto;
+    margin-left: auto; */
+}
