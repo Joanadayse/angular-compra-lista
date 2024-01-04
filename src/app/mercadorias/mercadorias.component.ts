@@ -1,30 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MercadoriaService } from '../mercadoria.service';
+import { Mercadoria } from '../mercadoria';
 
 @Component({
   selector: 'app-mercadorias',
   templateUrl: './mercadorias.component.html',
   styleUrl: './mercadorias.component.css'
 })
-export class MercadoriasComponent {
+export class MercadoriasComponent implements OnInit{
 
   title="Lista de Compras";
-mercadorias=[{
-  id:1,
-    descricao:"arroz",
-    quantidadeEstoque:1,
-    quantidadeMinima:2
-  },
-{id:2,
-  descricao:"feijao",
-  quantidadeEstoque:5,
-  quantidadeMinima:3
-},
-{
-  id:3,
-  descricao:"oleo",
-  quantidadeEstoque:2,
-  quantidadeMinima:2
-}]
+  mercadorias:Mercadoria[]
+
 
 novaMercadoria={
   id:4,
@@ -42,7 +29,15 @@ adicionarMercadoria(){
   })
 
 }
-constructor(){}
+constructor(private mercadoriaService: MercadoriaService) {}
+
+ngOnInit(){
+  this.getMercadorias();
+}
+
+getMercadorias():void{
+  this.mercadorias= this.mercadoriaService.getMercadorias();
+}
 
 
 }
