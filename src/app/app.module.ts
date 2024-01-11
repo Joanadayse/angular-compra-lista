@@ -5,11 +5,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MercadoriasComponent } from './mercadorias/mercadorias.component';
 import { FormsModule } from '@angular/forms';
+import { Pagina1Component } from './pagina1/pagina1.component';
+import { Pagina2Component } from './pagina2/pagina2.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MercadoriasComponent
+    MercadoriasComponent,
+    Pagina1Component,
+    Pagina2Component
   ],
   imports: [
     BrowserModule,
@@ -17,6 +21,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   providers: [],
-  bootstrap: [MercadoriasComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
