@@ -7,13 +7,15 @@ import { MercadoriasComponent } from './mercadorias/mercadorias.component';
 import { FormsModule } from '@angular/forms';
 import { Pagina1Component } from './pagina1/pagina1.component';
 import { Pagina2Component } from './pagina2/pagina2.component';
+import { EditmercadoriaComponent } from './editmercadoria/editmercadoria.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MercadoriasComponent,
     Pagina1Component,
-    Pagina2Component
+    Pagina2Component,
+    EditmercadoriaComponent
   ],
   imports: [
     BrowserModule,
